@@ -1,0 +1,13 @@
+import { CriaturaMagica } from "./CriaturaMagica";
+
+export class Dragao extends CriaturaMagica {
+    usarMagia(): void {
+        console.log(`🐲 ${this.nome} cospe fogo com poder ${this.poder}!`);
+    }
+}
+
+export class Fenix extends CriaturaMagica {
+    usarMagia(): void {
+        console.log(`🔥 ${this.nome} renasce das cinzas com poder ${this.poder}!`);
+    }
+}
