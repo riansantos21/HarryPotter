@@ -1,0 +1,11 @@
+import { IMagia } from "./interfaces";
+
+export abstract class CriaturaMagica implements IMagia {
+    constructor(
+        public nome: string,
+        public tipo: string,
+        public poder: number
+    ) {}
+
+    abstract usarMagia(): void;
+}
