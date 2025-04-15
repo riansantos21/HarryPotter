@@ -1,0 +1,16 @@
+import { CriaturaMagica } from "./CriaturaMagica";
+
+export abstract class Guardiao extends CriaturaMagica {
+    abstract protegerSegredo(): void;
+}
+import { Guardiao } from "./Guardiao";
+
+export class GuardiaoDragao extends Guardiao {
+    usarMagia(): void {
+        console.log(`🐉 Guardião ${this.nome} lança chamas protetoras!`);
+    }
+
+    protegerSegredo(): void {
+        console.log(`🔒 ${this.nome} protege um segredo nos subterrâneos de Hogwarts.`);
+    }
+}
