@@ -1,0 +1,24 @@
+import { CriaturaMagica } from "./CriaturaMagica";
+import { IFeitico } from "./interfaces";
+
+export class Bruxo extends CriaturaMagica {
+    constructor(
+        nome: string,
+        tipo: string,
+        poder: number,
+        public varinha: string,
+        public casa: string,
+        public habilidades: string[],
+        public poderMagico: number
+    ) {
+        super(nome, tipo, poder);
+    }
+
+    usarMagia(): void {
+        this.lancarFeitico();
+    }
+
+    lancarFeitico(): void {
+        console.log(`✨ ${this.nome} lança feitiço com a varinha ${this.varinha} (poder mágico ${this.poderMagico})!`);
+    }
+}
