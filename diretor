@@ -1,0 +1,14 @@
+import { IGrimorio } from "./interfaces";
+
+export class Diretor implements IGrimorio {
+    private feiticos: { [key: string]: string } = {
+        "Lumos": "Acende a ponta da varinha.",
+        "Expelliarmus": "Desarma o oponente.",
+        "Expecto Patronum": "Invoca um Patrono protetor.",
+        "Avada Kedavra": "Feitiço da morte instantânea."
+    };
+
+    consultarFeitico(nomeFeitico: string): string {
+        return this.feiticos[nomeFeitico] || "Feitiço desconhecido.";
+    }
+}
