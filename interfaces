@@ -1,0 +1,16 @@
+
+export interface IMagia {
+    usarMagia(): void;
+}
+
+
+export interface IFeitico {
+    nome: string;
+    poderBase: number;
+    lancar(): void;
+}
+
+
+export interface IGrimorio {
+    consultarFeitico(nomeFeitico: string): string;
+}
