@@ -1,0 +1,11 @@
+import { IMagia } from "./interfaces";
+
+export function torneioTriBruxo(participantes: IMagia[]): void {
+    console.log("🏆 Iniciando o Torneio Tribruxo!");
+
+    for (let i = 1; i <= 3; i++) {
+        const escolhido = participantes[Math.floor(Math.random() * participantes.length)];
+        console.log(`\nRodada ${i}:`);
+        escolhido.usarMagia();
+    }
+}
