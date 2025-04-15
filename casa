@@ -1,0 +1,18 @@
+import { IMagia } from "./interfaces";
+
+export class Casa {
+    public membros: IMagia[] = [];
+
+    constructor(public nome: string) {}
+
+    adicionarMembro(membro: IMagia): void {
+        this.membros.push(membro);
+    }
+
+    listarMembros(): void {
+        console.log(`📜 Membros da Casa ${this.nome}:`);
+        this.membros.forEach((membro: any) => {
+            console.log(`- ${membro.nome}`);
+        });
+    }
+}
