@@ -1,0 +1,10 @@
+import { Casa } from "./Casa";
+import { IMagia } from "./interfaces";
+
+export function batalhaEpica(casa: Casa, inimigo: IMagia): void {
+    console.log(`⚔️ A Casa ${casa.nome} entra em batalha contra um inimigo poderoso!`);
+
+    casa.membros.forEach(membro => membro.usarMagia());
+    console.log("👹 Inimigo revida!");
+    inimigo.usarMagia();
+}
