@@ -1,0 +1,9 @@
+import { IFeitico } from "./interfaces";
+
+export class Feitico implements IFeitico {
+    constructor(public nome: string, public poderBase: number) {}
+
+    lancar(): void {
+        console.log(`💥 Feitiço '${this.nome}' lançado com poder ${this.poderBase}!`);
+    }
+}
